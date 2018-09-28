@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
+
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <form action="/" method="post">
+          <input class="w3-input w3-border w3-round-large" placeholder="Enter City..." name='city' type="text"></p>
+          <input type="submit" class="ghost-button" value="Get Weather">
+        </form>
+        <% if(typeof weather==='string' && weather!== null){ %>
+          <p><%= weather %></p>
+        <% } %>
+
+        <% if(typeof error ==='string' && error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+      </fieldset>
+    </div>
+  </body>
+</html>
